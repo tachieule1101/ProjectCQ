@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/style.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header>
+        <table>
+            <tr>
+                <th>
+                    <img class="hinh" src="~/image/103707335_264022214870356_8820201439945863488_n.png"
+                         alt="logo">
+                </th>
+
+                <th class="text">
+
+                    <h3><b> CỤC THUẾ THÀNH PHỐ HỒ CHÍ MINH </b></h3>
+                    <h3><b> CHI CỤC THUẾ KHU VỰC QUẬN 12 - HUYỆN HÓC MÔN</b></h3>
+                </th>
+
+            </tr>
+
+        </table>
+
+    </header>
+    <div class="navbar navbar-inverse navbar-fixed">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+        <footer>
+            <p>282A Nguyễn Ảnh Thủ, phường Hiệp Thành, quận 12</p>
+            <p>(0283) 891.7478 - (0283) 715.5734</p>
+            <p>90 Bà Triệu, thị trấn Hóc Môn, huyện Hóc Môn</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
