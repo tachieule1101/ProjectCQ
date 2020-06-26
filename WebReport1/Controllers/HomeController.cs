@@ -26,5 +26,9 @@ namespace WebReport1.Controllers
 
             return View();
         }
+        public ActionResult DonVi()
+        {
+            return View();
+        }
     }
 }

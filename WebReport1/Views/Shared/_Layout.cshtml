@@ -37,13 +37,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Tin Tức", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Văn bản pháp luật", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Sơ đồ tổ chức", "About", "Home")</li>
+                    <li>@Html.ActionLink("Danh sách cán bộ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Báo cáo chi tiêu", "DonVi", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -52,7 +53,6 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-
         <footer>
             <p>282A Nguyễn Ảnh Thủ, phường Hiệp Thành, quận 12</p>
             <p>(0283) 891.7478 - (0283) 715.5734</p>
