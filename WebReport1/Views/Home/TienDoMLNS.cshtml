@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebReport1.Models.TienDoMLNS>
+
+@{
+    ViewBag.Title = "TienDoMLNS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHITIEU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QUY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHQUY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHNAM)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHITIEU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHQUY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHNAM)
+        </td>
+       
+    </tr>
+}
+
+</table>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using WebReport1.Models;
 namespace WebReport1.Controllers
 {
     public class HomeController : Controller
@@ -13,22 +13,25 @@ namespace WebReport1.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult DanhBa()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult TienDoMLNS()
         {
-            ViewBag.Message = "Your contact page.";
+            QLtableListMLNS ql = new QLtableListMLNS();
+            List<TienDoMLNS> obj = ql.getTienDoMLNS();
+            return View(obj);
 
-            return View();
         }
-        public ActionResult DonVi()
+        public ActionResult TienDoCBQL()
         {
-            return View();
+            QLtableList ql = new QLtableList();
+            List<TienDo> obj = ql.getTienDo();
+            return View(obj);
         }
     }
 }
