@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/style1.css")
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/style.css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -29,7 +29,7 @@
         </table>
 
     </header>
-    <div class="navbar navbar-inverse navbar-fixed" style="background:#b6ff00 !important;">
+    <div class="navbar navbar-inverse navbar-fixed" style="background:green !important">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,27 +37,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Trang Chủ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Văn bản pháp luật", "Index", "Home")</li>*@
+                    <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
                     <li>@Html.ActionLink("Tổng hợp danh bạ", "DanhBa", "Home")</li>
-                    <li>@Html.ActionLink("Tiến độ thu theo MLNS", "TienDoMLNS", "Home")</li>
-                    <li>@Html.ActionLink("Tiến độ thu theo CBQL", "TienDoCBQL", "Home")</li>
-
-                  
-
+                    <li>@Html.ActionLink("Tiến độ MNLS", "TienDoMLNS", "Home")</li>
+                    <li>@Html.ActionLink("Tiến độ CBQL", "TienDoCBQL", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content" style="padding-bottom:50px">
+    <div class="container body-content">
         @RenderBody()
         <hr />
-        
-        <footer style="position: fixed !important">
+        <footer>
             <br />
             <p>Địa chỉ: số 282A Nguyễn Ảnh Thủ, phường Hiệp Thành, quận 12. Điện Thoại: 38917431.</p>
             <p>Bộ phận một cửa: số 90 Bà Triệu, xã Tân Xuân, huyện Hóc Môn.</p>
