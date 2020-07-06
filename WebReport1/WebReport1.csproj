@@ -260,11 +260,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\TienDoMLNS.cshtml" />
-    <Content Include="Views\Home\TienDoCBQL.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\DanhBa.cshtml" />
     <Content Include="Views\Shared\Layout_Khac.cshtml" />
+    <Content Include="Views\Home\TienDoMLNS.cshtml" />
+    <Content Include="Views\Home\TienDoCBQL.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>

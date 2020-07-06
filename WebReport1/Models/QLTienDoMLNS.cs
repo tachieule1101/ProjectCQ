@@ -34,7 +34,7 @@ namespace WebReport1.Models
         {
             string sql;
 
-            sql = "SELECT * FROM TienDoCBQL";
+            sql = "SELECT * FROM TienDoMLNS";
 
 
             List<QLTienDoMLNS> strTa = new List<QLTienDoMLNS>();
@@ -50,15 +50,18 @@ namespace WebReport1.Models
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 strH = new QLTienDoMLNS();
-                strH.TT = dt.Rows[i]["TT"].ToString();
+                strH.TT = (i + 1) + "";
                 strH.MA = dt.Rows[i]["MA"].ToString();
                 strH.CHITIEU = dt.Rows[i]["CHITIEU"].ToString();
-                strH.THANG = dt.Rows[i]["THANG"].ToString();
-                strH.QUY = dt.Rows[i]["QUY"].ToString();
 
-                strH.KHQUY = dt.Rows[i]["KHQUY"].ToString();
-                strH.KHNAM = dt.Rows[i]["KHNAM"].ToString();
+                strH.THANG = Convert.ToDecimal(long.Parse(dt.Rows[i]["THANG"].ToString())).ToString("#,##0");
+
+                strH.QUY = Convert.ToDecimal(long.Parse(dt.Rows[i]["QUY"].ToString())).ToString("#,##0");
+                strH.NAM = Convert.ToDecimal(long.Parse(dt.Rows[i]["NAM"].ToString())).ToString("#,##0");
+                strH.KHQUY = Convert.ToDecimal(long.Parse(dt.Rows[i]["KHQUY"].ToString())).ToString("#,##0");
+                strH.KHNAM = Convert.ToDecimal(long.Parse(dt.Rows[i]["KHNAM"].ToString())).ToString("#,##0");
                 strTa.Add(strH);
+                
             }
             return strTa;
         }

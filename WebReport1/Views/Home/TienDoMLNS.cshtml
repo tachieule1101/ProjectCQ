@@ -8,33 +8,33 @@
 <br /> <br />
 <h2>Tiến độ thu theo mục lục ngân sách tính đến ngày <span id="demo"></span> </h2>
 <br />
-<table class="table" style="font-size:20px">
+<table class="table" style="font-size:15px">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TT)
+            TT
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MA)
+            MÃ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CHITIEU)
+            CHỈ TIÊU
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.THANG)
+            THÁNG
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QUY)
+            QUÝ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NAM)
+            NĂM
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.KHQUY)
+            KẾ HOẠCH QUÝ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.KHNAM)
+            KẾ HOẠCH NĂM
         </th>
-       
+
     </tr>
 
     @foreach (var item in Model)
@@ -73,8 +73,8 @@
 <script>
    var today = new Date();
    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-   var dateTime = date+' '+time;
+   //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+   var dateTime = date;
 
    document.getElementById("demo").innerHTML = dateTime;
 </script>

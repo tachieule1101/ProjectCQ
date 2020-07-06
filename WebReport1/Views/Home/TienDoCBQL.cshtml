@@ -4,75 +4,77 @@
     ViewBag.Title = "TienDoCBQL";
     Layout = "~/Views/Shared/Layout_Khac.cshtml";
 }
+
 <br /> <br />
-<h2>Tiến độ thu theo mục lục ngân sách tính đến ngày <span id="demo"></span> </h2>
+<h2>Tiến độ thu theo cán bộ quản lí tính đến ngày <span id="demo"></span> </h2>
 <br />
-<table class="table" style="font-size:20px">
+<table class="table" style="font-size:15px">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TT)
+           TT
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MA)
+            MÃ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CHITIEU)
+           CHỈ TIÊU
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.THANG)
+            THÁNG
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QUY)
+            QUÝ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NAM)
+          NĂM
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.KHQUY)
+           KẾ HOẠCH QUÝ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.KHNAM)
+           KẾ HOẠCH NĂM
         </th>
+
     </tr>
- 
-    
+
     @foreach (var item in Model)
             {
-<tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TT)
-        </td>
-        <td style="text-align:center">
-            @Html.DisplayFor(modelItem => item.MA)
-        </td>
-        <td style="text-align:left">
-            @Html.DisplayFor(modelItem => item.CHITIEU)
-        </td>
-        <td style="text-align:right">
-            @Html.DisplayFor(modelItem => item.THANG)
-        </td>
-        <td style="text-align:right">
-            @Html.DisplayFor(modelItem => item.QUY)
-        </td>
-        <td style="text-align:right">
-            @Html.DisplayFor(modelItem => item.NAM)
-        </td>
-        <td style="text-align:right">
-            @Html.DisplayFor(modelItem => item.KHQUY)
-        </td>
-        <td style="text-align:right">
-            @Html.DisplayFor(modelItem => item.KHNAM)
-        </td>
-    </tr>
- 
-}
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TT)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.MA)
+            </td>
+            <td style="text-align:left">
+                @Html.DisplayFor(modelItem => item.CHITIEU)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.THANG)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.QUY)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.NAM)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.KHQUY)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.KHNAM)
+            </td>
+        </tr>
+
+    }
 
 </table>
+
 <script>
    var today = new Date();
    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-   var dateTime = date+' '+time;
+   //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+   var dateTime = date;
 
    document.getElementById("demo").innerHTML = dateTime;
 </script>
