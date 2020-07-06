@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="aspnet-WebReport1-20200622011138" Class="MyDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=aspnet-WebReport1-20200622011138;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="aspnet_WebReport1_20200622011138ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TienDoCBQL" Member="TienDoCBQLs">
+    <Type Name="TienDoCBQL">
+      <Column Name="TT" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHITIEU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="THANG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="QUY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NAM" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="KHQUY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="KHNAM" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TienDoMLNS" Member="TienDoMLNs">
+    <Type Name="TienDoMLN">
+      <Column Name="TT" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHITIEU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="THANG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="QUY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NAM" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="KHQUY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="KHNAM" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
